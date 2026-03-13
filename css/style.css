@@ -79,6 +79,7 @@ a {
 }
 
 .gallery-square .overlay {
+  font-family: 'Kaushan Script', cursive;;
   position: absolute;
   top: 0;
   left: 0;
