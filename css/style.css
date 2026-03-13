@@ -18,6 +18,27 @@ header nav a {
   text-decoration: none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Kaushan Script', cursive;
+  color: #ffffff; /* ensures headings are white */
+  font-weight: bold;
+  margin: 0.5rem 0;
+  line-height: 1.2;
+}
+
+p {
+  font-family: 'Kaushan Script', cursive;
+  color: #ffffff;
+  margin: 0.5rem 0;
+}
+
+a {
+  font-family: 'Kaushan Script', cursive;;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+
 #gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, 200px);
