@@ -12,30 +12,25 @@ const query = new Parse.Query(Z_GALLERY);
 query.find().then((results) => {
   galleryGrid.innerHTML = ""; // clear loading text
 
-  results.forEach((gallery) => {
-    const name = gallery.get("NAME");
-    const imageUrl = gallery.get("IMAGE");
+results.forEach((gallery) => {
+  const name = gallery.get("NAME");
+  const imageFile = gallery.get("IMAGE"); // this is a Parse.File
+  const imageUrl = imageFile ? imageFile.url() : ""; // get the actual URL
 
-    // Create the square
-    const square = document.createElement("div");
-    square.className = "gallery-square";
+  const square = document.createElement("div");
+  square.className = "gallery-square";
 
-    // Create image element
-    const img = document.createElement("img");
-    img.src = imageUrl;
+  const img = document.createElement("img");
+  img.src = imageUrl;
 
-    // Create overlay with name
-    const overlay = document.createElement("div");
-    overlay.className = "overlay";
-    overlay.textContent = name;
+  const overlay = document.createElement("div");
+  overlay.className = "overlay";
+  overlay.textContent = name;
 
-    // Append image and overlay to square
-    square.appendChild(img);
-    square.appendChild(overlay);
-
-    // Append square to grid
-    galleryGrid.appendChild(square);
-  });
+  square.appendChild(img);
+  square.appendChild(overlay);
+  galleryGrid.appendChild(square);
+});
 }).catch((error) => {
   galleryGrid.innerHTML = "Failed to load galleries: " + error.message;
 });
