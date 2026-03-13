@@ -18,6 +18,13 @@ header nav a {
   text-decoration: none;
 }
 
+.main {
+  height: 66vh;              /* about 2/3 of the page */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Kaushan Script', cursive;
   color: #ffffff; /* ensures headings are white */
@@ -98,4 +105,14 @@ a {
 
 .gallery-square:hover .overlay {
   background: rgba(0, 0, 0, 0.5);
+}
+
+.nav-links {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links a:hover {
+  opacity: 0.7;
 }
