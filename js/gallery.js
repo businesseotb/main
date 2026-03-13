@@ -1,16 +1,41 @@
-const gallery = document.getElementById("gallery");
+// Initialize Back4App
+Parse.initialize("AZ2atrslozmQ8GUb7iNfjuRQfpLI5WffQ4w8NCka", "mL8fa0LBZssoy82vPwQmtvW2Tz7IdpZBj9PfMASb");
+Parse.serverURL = "https://parseapi.back4app.com/";
 
-// Example static images for testing
-const testImages = [
-  "https://via.placeholder.com/200x200.png?text=Image+1",
-  "https://via.placeholder.com/200x200.png?text=Image+2",
-  "https://via.placeholder.com/200x200.png?text=Image+3"
-];
+// Reference to gallery container
+const galleryGrid = document.getElementById("gallery-grid");
 
-gallery.innerHTML = ""; // Clear loading text
+// Query Z_GALLERY table
+const Z_GALLERY = Parse.Object.extend("Z_GALLERY");
+const query = new Parse.Query(Z_GALLERY);
 
-testImages.forEach(url => {
-  const img = document.createElement("img");
-  img.src = url;
-  gallery.appendChild(img);
+query.find().then((results) => {
+  galleryGrid.innerHTML = ""; // clear loading text
+
+  results.forEach((gallery) => {
+    const name = gallery.get("NAME");
+    const imageUrl = gallery.get("IMAGE");
+
+    // Create the square
+    const square = document.createElement("div");
+    square.className = "gallery-square";
+
+    // Create image element
+    const img = document.createElement("img");
+    img.src = imageUrl;
+
+    // Create overlay with name
+    const overlay = document.createElement("div");
+    overlay.className = "overlay";
+    overlay.textContent = name;
+
+    // Append image and overlay to square
+    square.appendChild(img);
+    square.appendChild(overlay);
+
+    // Append square to grid
+    galleryGrid.appendChild(square);
+  });
+}).catch((error) => {
+  galleryGrid.innerHTML = "Failed to load galleries: " + error.message;
 });
