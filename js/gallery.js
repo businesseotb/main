@@ -1,18 +1,16 @@
-const Images = Parse.Object.extend("Images");
-const query = new Parse.Query(Images);
+const gallery = document.getElementById("gallery");
 
-query.find().then((results) => {
+// Example static images for testing
+const testImages = [
+  "https://via.placeholder.com/200x200.png?text=Image+1",
+  "https://via.placeholder.com/200x200.png?text=Image+2",
+  "https://via.placeholder.com/200x200.png?text=Image+3"
+];
 
-  const gallery = document.getElementById("gallery");
+gallery.innerHTML = ""; // Clear loading text
 
-  results.forEach((imgObj) => {
-
-    const img = document.createElement("img");
-
-    img.src = imgObj.get("image_url");
-
-    gallery.appendChild(img);
-
-  });
-
+testImages.forEach(url => {
+  const img = document.createElement("img");
+  img.src = url;
+  gallery.appendChild(img);
 });
