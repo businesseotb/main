@@ -34,7 +34,7 @@ header nav a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
-  padding: 1rem;
+  padding: 6rem;
   max-width: 400px; /* optional, to prevent huge squares on large screens */
   margin: 0 auto; /* center grid */
 }
