@@ -29,14 +29,16 @@ results.forEach((gallery) => {
 
   square.appendChild(img);
   square.appendChild(overlay);
+  square.addEventListener("click", () => {
+    const galleryId = gallery.id;
+    window.location.href = `showgallery.html?gallery=${galleryId}`;
+  });
   galleryGrid.appendChild(square);
+
+  
 });
 }).catch((error) => {
   galleryGrid.innerHTML = "Failed to load galleries: " + error.message;
 });
 
-square.addEventListener("click", () => {
-  const galleryId = gallery.id;
 
-  window.location.href = `showgallery.html?gallery=${galleryId}`;
-});
