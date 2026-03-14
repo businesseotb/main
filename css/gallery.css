@@ -107,12 +107,10 @@
 #popup-img{
   max-width:90%;
   max-height:90%;
+  pointer-events:none;
 }
 
 #image-popup.active{
   display:flex;
 }
 
-#popup-img{
-pointer-events:none;
-}
