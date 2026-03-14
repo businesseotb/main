@@ -1,0 +1,61 @@
+/*GALLERIES*/
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  gap: 10px;
+  padding: 1rem;
+}
+
+#gallery img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+#gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  padding: 2rem;
+  max-width: 900px; /* optional, to prevent huge squares on large screens */
+  margin: 0 auto; /* center grid */
+}
+
+.gallery-square {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* makes it square */
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.gallery-square img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-square .overlay {
+  font-family: "Herculanum LT W01 Bold";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3); /* semi-transparent overlay */
+  transition: background 0.3s;
+}
+
+.gallery-square:hover .overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
