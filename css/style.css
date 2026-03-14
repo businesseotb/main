@@ -129,7 +129,7 @@ a {
   justify-content: space-between;
 }
 
-.nav-links a: hoover {
+.nav-links a:hover {
   opacity: 1;
 }
 
