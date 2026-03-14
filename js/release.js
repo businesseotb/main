@@ -31,7 +31,7 @@ results.forEach((gallery) => {
   square.appendChild(overlay);
   square.addEventListener("click", () => {
     const releaseId = gallery.id;
-    window.location.href = `showgallery.html?gallery=${releaseId}`;
+    window.location.href = `showreleas.html?release=${releaseId}`;
   });
   galleryGrid.appendChild(square);
 
