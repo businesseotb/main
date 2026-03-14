@@ -129,6 +129,7 @@ a {
 .nav-links {
   width: 80%;
   display: flex;
+  font-size: 2rem;
   justify-content: space-between;
 }
 
