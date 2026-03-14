@@ -231,9 +231,10 @@ a {
 
 /* Vertical rectangle instead of square */
 .comic-card {
+  aspect-ratio: 2 / 3;
   position: relative;
-  width: 100%;
-  padding-top: 150%; /* taller than width = vertical rectangle */
+ /* width: 100%;*/
+  /*padding-top: 150%;  taller than width = vertical rectangle */
   overflow: hidden;
   border-radius: 10px;
   cursor: pointer;
