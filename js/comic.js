@@ -21,6 +21,11 @@ query.find().then((results) => {
       <div class="overlay">${name}</div>
     `;
 
+    card.addEventListener("click", () => {
+      const comicId = comic.id;
+      window.location.href = `showgallery.html?gallery=${comicId}`;
+    }
+
     grid.appendChild(card);
   });
 }).catch((error) => {
