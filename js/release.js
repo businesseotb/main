@@ -31,7 +31,7 @@ results.forEach((release) => {
   square.appendChild(overlay);
   square.addEventListener("click", () => {
     const releaseId = release.id;
-    window.location.href = `showreleas.html?release=${releaseId}`;
+    window.location.href = `showrelease.html?release=${releaseId}`;
   });
   releaseGrid.appendChild(square);
 
