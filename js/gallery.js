@@ -35,7 +35,7 @@ results.forEach((gallery) => {
   galleryGrid.innerHTML = "Failed to load galleries: " + error.message;
 });
 
-card.addEventListener("click", () => {
+square.addEventListener("click", () => {
   const galleryId = gallery.id;
 
   window.location.href = `showgallery.html?gallery=${galleryId}`;
