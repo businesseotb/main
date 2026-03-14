@@ -1,0 +1,53 @@
+
+.site-footer {
+  height: 27vh; 
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 30px; /* pushes it away from the left edge */
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-right: 30px; /* pushes it away from the right edge */
+}
+
+.qr-code {
+  width: 150px;
+  height: auto;
+  cursor: pointer;
+}
+
+.footer-btn {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.footer-btn:hover {
+  background: white;
+  color: black;
+}
+
+.member-text {
+  font-family: "Herculanum LT W01 Bold";
+  color: #ffffff; /* white text */
+  margin: 0;
+  font-weight: bold;
+}
