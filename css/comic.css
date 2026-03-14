@@ -41,13 +41,24 @@
 }
 
 .comic-card .overlay {
+  font-family: "Herculanum LT W01 Bold";
   position: absolute;
-  bottom: 0;
+  top: 0;
+  left: 0;
   width: 100%;
-  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
   text-align: center;
-  padding: 5px;
-  font-family: "Herculanum", serif;
+  font-size: 2rem;
   font-weight: bold;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3); /* semi-transparent overlay */
+  transition: background 0.3s;
+}
+
+
+.comic-card:hover .overlay {
+  background: rgba(0, 0, 0, 0.5);
 }
