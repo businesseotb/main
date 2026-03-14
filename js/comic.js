@@ -24,7 +24,7 @@ query.find().then((results) => {
     card.addEventListener("click", () => {
       const comicId = comic.id;
       window.location.href = `showcomic.html?comic=${comicId}`;
-    )};
+    });
 
 
     grid.appendChild(card);
