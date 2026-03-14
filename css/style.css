@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "HerculanumCustom";
+  src: url("../fonts/Herculanum-Regular.ttf") format("truetype");
+}
+
 body {
   background-image: url("../images/Header.jpg");
   background-size: cover;       /* fills screen */
@@ -10,11 +15,6 @@ body {
   padding: 0;
   background-color: #000000; /* pitch black */
   color: #ffffff; /* white text */
-}
-
-@font-face {
-  font-family: "HerculanumCustom";
-  src: url("../fonts/Herculanum-Regular.ttf") format("truetype");
 }
 
 .site-footer {
