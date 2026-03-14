@@ -5,9 +5,9 @@ Parse.serverURL = "https://parseapi.back4app.com/";
 // Reference to gallery container
 const galleryGrid = document.getElementById("gallery-grid");
 
-// Query Z_GALLERY table
-const Z_GALLERY = Parse.Object.extend("Z_PUB");
-const query = new Parse.Query(Z_PUB);
+// Query release table
+const release = Parse.Object.extend("Z_PUB");
+const query = new Parse.Query(release);
 
 query.find().then((results) => {
   galleryGrid.innerHTML = ""; // clear loading text
