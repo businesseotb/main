@@ -13,6 +13,41 @@ body {
   color: #ffffff; /* white text */
 }
 
+.sec-header {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.sec-header h1 {
+  font-family: "Herculanum", serif;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.sect-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 60vh; center vertically */
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* space between links */
+  text-align: center;
+}
+
+.contact-links a {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: underline;
+}
+
+.contact-links a:hover {
+  opacity: 0.7;
+}
+
 .site-footer {
   height: 27vh; 
   background-color: #000000;
