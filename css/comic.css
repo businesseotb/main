@@ -60,6 +60,10 @@
 
 
 .comic-card:hover img {
-  filter: brightness(1.3);
+  filter: brightness(1.1);
+  transform: scale(1.05);
+}
+
+.comic-card:hover .overlay {
   transform: scale(1.05);
 }
