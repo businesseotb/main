@@ -135,4 +135,6 @@ a {
 .nav-links a:hover {
   font-size: 3rem;
   opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 8px;
 }
