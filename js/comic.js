@@ -2,35 +2,27 @@
 Parse.initialize("AZ2atrslozmQ8GUb7iNfjuRQfpLI5WffQ4w8NCka", "mL8fa0LBZssoy82vPwQmtvW2Tz7IdpZBj9PfMASb");
 Parse.serverURL = "https://parseapi.back4app.com/";
 
-// Reference to gallery container
-const galleryGrid = document.getElementById("gallery-grid");
-
-// Query Z_GALLERY table
-const Z_GALLERY = Parse.Object.extend("Z_GALLERY");
-const query = new Parse.Query(Z_GALLERY);
+const Comics = Parse.Object.extend("Z_COMICS");
+const query = new Parse.Query(Comics);
 
 query.find().then((results) => {
-  galleryGrid.innerHTML = ""; // clear loading text
+  const grid = document.getElementById("comics-grid");
 
-results.forEach((gallery) => {
-  const name = gallery.get("NAME");
-  const imageFile = gallery.get("IMAGE"); // this is a Parse.File
-  const imageUrl = imageFile ? imageFile.url() : ""; // get the actual URL
+  results.forEach((comic) => {
+    const name = comic.get("NAME");
+    const imageFile = comic.get("COVER"); // Back4App file
+    const imageUrl = imageFile ? imageFile.url() : "";
 
-  const square = document.createElement("div");
-  square.className = "gallery-square";
+    const card = document.createElement("div");
+    card.className = "comic-card";
 
-  const img = document.createElement("img");
-  img.src = imageUrl;
+    card.innerHTML = `
+      <img src="${imageUrl}" alt="${name}">
+      <div class="overlay">${name}</div>
+    `;
 
-  const overlay = document.createElement("div");
-  overlay.className = "overlay";
-  overlay.textContent = name;
-
-  square.appendChild(img);
-  square.appendChild(overlay);
-  galleryGrid.appendChild(square);
-});
+    grid.appendChild(card);
+  });
 }).catch((error) => {
-  galleryGrid.innerHTML = "Failed to load galleries: " + error.message;
+  console.error("Error fetching comics:", error);
 });
