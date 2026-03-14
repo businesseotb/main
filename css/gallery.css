@@ -112,3 +112,7 @@
 #image-popup.active{
   display:flex;
 }
+
+#popup-img{
+pointer-events:none;
+}
