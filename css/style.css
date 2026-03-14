@@ -145,7 +145,7 @@ a {
   text-underline-offset: 8px;
 }
 
-
+/*GALLERIES*/
 #gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, 200px);
@@ -206,6 +206,60 @@ a {
 .gallery-square:hover .overlay {
   background: rgba(0, 0, 0, 0.5);
 }
+
+/*COMICS*/
+#comic {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  gap: 10px;
+  padding: 1rem;
+}
+
+#comic img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+#comic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  padding: 2rem;
+  max-width: 900px; /* optional, to prevent huge squares on large screens */
+  margin: 0 auto; /* center grid */
+}
+
+/* Vertical rectangle instead of square */
+.comic-card {
+  position: relative;
+  width: 100%;
+  padding-top: 150%; /* taller than width = vertical rectangle */
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.comic-card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.comic-card .overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  text-align: center;
+  padding: 5px;
+  font-family: "Herculanum", serif;
+  font-weight: bold;
+}
+
 
 .nav-links {
   width: 80%;
