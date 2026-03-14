@@ -32,7 +32,7 @@ header {
 }
 
 .main {
-  height: 66vh;              /* about 2/3 of the page */
+  height: 130vh;              /* about 2/3 of the page */
   display: flex;
   align-items: center;
   justify-content: center;
