@@ -6,7 +6,7 @@ const Comics = Parse.Object.extend("Z_COMICS");
 const query = new Parse.Query(Comics);
 
 query.find().then((results) => {
-  const grid = document.getElementById("comics-grid");
+  const grid = document.getElementById("comic-grid");
 
   results.forEach((comic) => {
     const name = comic.get("NAME");
