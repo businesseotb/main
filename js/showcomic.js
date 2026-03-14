@@ -1,42 +1,55 @@
-// Initialize Back4App
 Parse.initialize("AZ2atrslozmQ8GUb7iNfjuRQfpLI5WffQ4w8NCka", "mL8fa0LBZssoy82vPwQmtvW2Tz7IdpZBj9PfMASb");
 Parse.serverURL = "https://parseapi.back4app.com/";
 
-// Reference to comic container
-const comicGrid = document.getElementById("comic-grid");
+const urlParams = new URLSearchParams(window.location.search);
+const comicId = urlParams.get("gallery");
 
-// Query comic table
-const comic = Parse.Object.extend("Z_COMIC");
-const query = new Parse.Query(comic);
+const ImagesInComic= Parse.Object.extend("Z_IMAGES_IN_COMIC");
+const query = new Parse.Query(ImagesInComic);
 
-query.find().then((results) => {
-  comicGrid.innerHTML = ""; // clear loading text
+const comicPointer = new Parse.Object("Z_COMIC");
+comicPointer.id = comicId;
 
-results.forEach((comic) => {
-  const name = comic.get("COMIC");
-  const imageFile = comic.get("IMAGE"); // this is a Parse.File
-  const imageUrl = imageFile ? imageFile.url() : ""; // get the actual URL
+query.equalTo("COMIC", comicPointer);
+query.include("IMAGE");
 
-  const square = document.createElement("div");
-  square.className = "comic-square";
+query.find().then(results => {
 
-  const img = document.createElement("img");
-  img.src = imageUrl;
+const grid = document.getElementById("images-grid");
 
-  const overlay = document.createElement("div");
-  overlay.className = "overlay";
-  overlay.textContent = name;
+results.forEach(item => {
 
-  square.appendChild(img);
-  square.appendChild(overlay);
-  square.addEventListener("click", () => {
-    const comicId = comic.id;
-    window.location.href = `showreleas.html?comic=${comicId}`;
-  });
-  comicGrid.appendChild(square);
+const imageObj = item.get("IMAGE");
+const imageFile = imageObj.get("IMAGE");
+const imageUrl = imageFile.url();
 
-  
+const card = document.createElement("div");
+card.className="image-card";
+
+card.innerHTML = `<img src="${imageUrl}">`;
+
+grid.appendChild(card);
+
+card.addEventListener("click", () => {
+openPopup(imageUrl);
 });
-}).catch((error) => {
-  comicGrid.innerHTML = "Failed to load galleries: " + error.message;
+
 });
+
+});
+
+const popup = document.getElementById("image-popup");
+const popupImg = document.getElementById("popup-img");
+
+function openPopup(url){
+
+popupImg.src = url;
+popup.classList.add("active");
+
+}
+
+popup.addEventListener("click", () => {
+popup.classList.remove("active");
+});
+
+document.addEventListener("contextmenu", e => e.preventDefault());
