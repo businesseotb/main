@@ -32,10 +32,12 @@ header {
 }
 
 .main {
-  height: 130vh;              /* about 2/3 of the page */
+  height: 66vh;              /* about 2/3 of the page */
   display: flex;
+  flex-direction: column;
+  padding-bottom: 40px;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 h1, h2, h3, h4, h5, h6 {
