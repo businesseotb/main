@@ -20,10 +20,7 @@ body {
 }
 
 @font-face {
-  font-family: "Herculanum";
-  src: url("../fonts/Herculanum-Regular.woff2") format("woff2"),
-       url("../fonts/Herculanum-Regular.woff") format("woff"),
-       url("../fonts/Herculanum-Regular.ttf") format("truetype");
+  font-family: "Herculanum LT W01 Bold";
   font-weight: normal;
   font-style: normal;
 }
@@ -48,7 +45,7 @@ header nav a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Herculanum", serif;
+  font-family: "Herculanum LT W01 Bold";
   color: #ffffff; /* ensures headings are white */
   font-weight: bold;
   margin: 0.5rem 0;
@@ -56,13 +53,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  font-family: "Herculanum", serif;
+  font-family: "Herculanum LT W01 Bold";
   color: #ffffff;
   margin: 0.5rem 0;
 }
 
 a {
-  font-family: "Herculanum", serif;
+  font-family: "Herculanum LT W01 Bold";
   color: #ffffff;
   text-decoration: none;
 }
