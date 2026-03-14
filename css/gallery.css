@@ -48,13 +48,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   color: white;
   font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.3); /* semi-transparent overlay */
-  transition: background 0.3s;
-}
 
 .gallery-square:hover .overlay {
   background: rgba(0, 0, 0, 0.5);
