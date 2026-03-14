@@ -51,7 +51,13 @@
   text-align: center;
   color: white;
   font-size: 2rem;
+}
+
+.gallery-square:hover img {
+  filter: brightness(1.1);
+  transform: scale(1.05);
+}
 
 .gallery-square:hover .overlay {
-  background: rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
 }
