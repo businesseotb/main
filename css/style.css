@@ -28,7 +28,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-left: 15px; /* pushes it away from the left edge */
+  margin-left: 30px; /* pushes it away from the left edge */
 }
 
 .footer-right {
@@ -36,7 +36,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  margin-right: 15px; /* pushes it away from the right edge */
+  margin-right: 30px; /* pushes it away from the right edge */
 }
 
 .qr-code {
