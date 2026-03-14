@@ -31,12 +31,6 @@ header {
   padding: 1rem;
 }
 
-header nav a {
-  color: #fff;
-  margin-left: 1rem;
-  text-decoration: none;
-}
-
 .main {
   height: 66vh;              /* about 2/3 of the page */
   display: flex;
