@@ -30,8 +30,8 @@ results.forEach((gallery) => {
   square.appendChild(img);
   square.appendChild(overlay);
   square.addEventListener("click", () => {
-    const galleryId = gallery.id;
-    window.location.href = `showgallery.html?gallery=${galleryId}`;
+    const releaseId = gallery.id;
+    window.location.href = `showgallery.html?gallery=${releaseId}`;
   });
   galleryGrid.appendChild(square);
 
