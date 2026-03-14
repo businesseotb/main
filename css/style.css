@@ -1,8 +1,9 @@
 @font-face {
-  font-family: "HerculanumCustom";
+  font-family: "Herculanum";
   src: url("../fonts/Herculanum-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
-
 body {
   background-image: url("../images/Header.jpg");
   background-size: cover;       /* fills screen */
@@ -45,7 +46,7 @@ header nav a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "HerculanumCustom", serif;
+  font-family: "Herculanum", serif;
   color: #ffffff; /* ensures headings are white */
   font-weight: bold;
   margin: 0.5rem 0;
@@ -53,13 +54,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  font-family: "HerculanumCustom", serif;
+  font-family: "Herculanum", serif;
   color: #ffffff;
   margin: 0.5rem 0;
 }
 
 a {
-  font-family: "HerculanumCustom", serif;
+  font-family: "Herculanum", serif;
   color: #ffffff;
   text-decoration: none;
 }
