@@ -38,8 +38,8 @@ body {
 }
 
 .qr-code {
-  width: 80px;
-  height: 80px;
+  width: 150px;
+  height: auto;
   cursor: pointer;
 }
 
