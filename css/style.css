@@ -59,6 +59,13 @@ body {
   color: black;
 }
 
+.member-text {
+  font-family: "Herculanum LT W01 Bold";
+  color: #ffffff; /* white text */
+  margin: 0;
+  font-weight: bold;
+}
+
 @font-face {
   font-family: "Herculanum LT W01 Bold";
   font-weight: normal;
