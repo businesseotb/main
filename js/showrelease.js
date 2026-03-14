@@ -2,15 +2,15 @@ Parse.initialize("AZ2atrslozmQ8GUb7iNfjuRQfpLI5WffQ4w8NCka", "mL8fa0LBZssoy82vPw
 Parse.serverURL = "https://parseapi.back4app.com/";
 
 const urlParams = new URLSearchParams(window.location.search);
-const galleryId = urlParams.get("gallery");
+const releaseId = urlParams.get("release");
 
-const ImagesInGallery = Parse.Object.extend("Z_IMAGES_IN_");
-const query = new Parse.Query(ImagesInGallery);
+const ImagesInRelease = Parse.Object.extend("Z_IMAGES_IN_PUB");
+const query = new Parse.Query(ImagesInRelease);
 
-const galleryPointer = new Parse.Object("Z_GALLERY");
-galleryPointer.id = galleryId;
+const releasePointer = new Parse.Object("Z_PUB");
+releasePointer.id = releaseId;
 
-query.equalTo("GALLERY", galleryPointer);
+query.equalTo("PUB", releasePointer);
 query.include("IMAGE");
 
 query.find().then(results => {
