@@ -12,6 +12,11 @@ body {
   color: #ffffff; /* white text */
 }
 
+@font-face {
+  font-family: "HerculanumCustom";
+  src: url("../fonts/Herculanum-Regular.ttf") format("truetype");
+}
+
 .site-footer {
   background-color: #000000;
   color: white;
