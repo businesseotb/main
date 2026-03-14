@@ -35,3 +35,20 @@ openPopup(imageUrl);
 });
 
 });
+
+
+const popup = document.getElementById("image-popup");
+const popupImg = document.getElementById("popup-img");
+
+function openPopup(url){
+
+popupImg.src = url;
+popup.classList.add("active");
+
+}
+
+popup.addEventListener("click", () => {
+popup.classList.remove("active");
+});
+
+document.addEventListener("contextmenu", e => e.preventDefault());
