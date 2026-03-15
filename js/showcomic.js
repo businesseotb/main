@@ -15,7 +15,7 @@ const query = new Parse.Query(ImagesInComic);
 
 console.log("Query created");
 
-const comicPointer = new Parse.Object("Z_COMIC");
+const comicPointer = new Parse.Object("Z_COMICS");
 comicPointer.id = comicId;
 
 console.log("Pointer created");
