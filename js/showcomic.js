@@ -23,43 +23,33 @@ query.descending("PAGE");
 
 query.find().then(results => {
 
-const grid = document.getElementById("comics-grid");
+    const grid = document.getElementById("comics-grid");
 
-results.forEach((item, index) => {
+    results.forEach((item, index) => {
 
-const imageObj = item.get("IMAGE");
-const imageFile = imageObj.get("IMAGE");
-const imageUrl = imageFile.url();
+    const imageObj = item.get("IMAGE");
+    const imageFile = imageObj.get("IMAGE");
+    const imageUrl = imageFile.url();
 
 // store url
-images.push(imageUrl);
-
-const card = document.createElement("div");
-card.className="image-card";
-
-card.innerHTML = `<img src="${imageUrl}" loading="lazy">`;
-
-grid.appendChild(card);
-
-card.addEventListener("click", () => {
-openPopup(index);
-});
-
-});
-
+     images.push(imageUrl);
+     const card = document.createElement("div");
+     card.className="image-card";
+     card.innerHTML = `<img src="${imageUrl}" loading="lazy">`;
+     grid.appendChild(card);
+     card.addEventListener("click", () => {
+            openPopup(index);
+        });
+    });
 });
 
 const popup = document.getElementById("image-popup");
 const popupImg = document.getElementById("popup-img");
 
 function openPopup(index){
-
-currentIndex = index;
-
-popupImg.src = images[currentIndex];
-
-popup.classList.add("active");
-
+    currentIndex = index;
+    popupImg.src = images[currentIndex];
+    popup.classList.add("active");
 }
 
 document.addEventListener("keydown", e => {
@@ -80,23 +70,33 @@ document.addEventListener("keydown", e => {
 
 
 function nextImage(){
-
-if(currentIndex < images.length - 1){
-currentIndex++;
-popupImg.src = images[currentIndex];
-}
+    if(currentIndex < images.length - 1){
+        currentIndex++;
+        popupImg.src = images[currentIndex];
+    }
 
 }
 
 function prevImage(){
-
-if(currentIndex > 0){
-currentIndex--;
-popupImg.src = images[currentIndex];
-}
-
+    if(currentIndex > 0){
+        currentIndex--;
+        popupImg.src = images[currentIndex];
+    }
 }
 
 popup.addEventListener("dblclick", () => {
-popup.classList.remove("active");
+    popup.classList.remove("active");
+});
+
+const leftArrow = document.querySelector(".left-arrow");
+const rightArrow = document.querySelector(".right-arrow");
+
+leftArrow.addEventListener("click", (e) => {
+    e.stopPropagation(); // prevent closing popup
+    prevImage();
+});
+
+rightArrow.addEventListener("click", (e) => {
+    e.stopPropagation(); // prevent closing popup
+    nextImage();
 });
