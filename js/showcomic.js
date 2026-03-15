@@ -15,7 +15,7 @@ query.include("IMAGE");
 
 query.find().then(results => {
 
-const grid = document.getElementById("images-grid");
+const grid = document.getElementById("comics-grid");
 
 results.forEach(item => {
 
