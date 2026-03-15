@@ -103,4 +103,4 @@ rightArrow.addEventListener("click", (e) => {
     nextImage();
 });
 
-};
+});
