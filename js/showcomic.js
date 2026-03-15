@@ -25,8 +25,29 @@ query.include("IMAGE");
 
 console.log("Query configured");
 
-query.find().then(results => {
+query.find()
+.then(results => {
 
 console.log("Results:", results);
 
+const grid = document.getElementById("comics-grid");
+
+results.forEach(item => {
+
+const imageObj = item.get("IMAGE");
+const imageFile = imageObj.get("IMAGE");
+const imageUrl = imageFile.url();
+
+const card = document.createElement("div");
+card.className="image-card";
+
+card.innerHTML = `<img src="${imageUrl}">`;
+
+grid.appendChild(card);
+
+});
+
+})
+.catch(error => {
+console.error("Parse query error:", error);
 });
