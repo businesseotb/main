@@ -119,3 +119,29 @@
 #image-popup.active{
   display:flex;
 }
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    padding: 10px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
+.arrow:hover {
+    background: rgba(0,0,0,0.6);
+}
+
+.left-arrow {
+    left: 20px;
+}
+
+.right-arrow {
+    right: 20px;
+}
