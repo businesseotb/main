@@ -80,7 +80,7 @@
 
 .image-card {
   position:relative;
-  aspect-ratio:1/1;
+  aspect-ratio: 2 / 3;
   overflow:hidden;
   cursor:pointer;
 }
