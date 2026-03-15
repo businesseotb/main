@@ -62,21 +62,20 @@ popup.classList.add("active");
 
 }
 
-popup.addEventListener("click", () => {
-popup.classList.remove("active");
-});
+document.addEventListener("keydown", e => {
+    if(!popup.classList.contains("active")) return;
 
-popup.addEventListener("click", (e) => {
+    if(e.key === "ArrowRight"){
+        nextImage();
+    }
 
-const clickX = e.clientX;
-const width = window.innerWidth;
+    if(e.key === "ArrowLeft"){
+        prevImage();
+    }
 
-if(clickX > width / 2){
-nextImage();
-}else{
-prevImage();
-}
-
+    if(e.key === "Escape"){
+        popup.classList.remove("active");
+    }
 });
 
 
