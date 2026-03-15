@@ -2,7 +2,7 @@ Parse.initialize("AZ2atrslozmQ8GUb7iNfjuRQfpLI5WffQ4w8NCka", "mL8fa0LBZssoy82vPw
 Parse.serverURL = "https://parseapi.back4app.com/";
 
 const urlParams = new URLSearchParams(window.location.search);
-const comicId = urlParams.get("gallery");
+const comicId = urlParams.get("comic");
 
 const ImagesInComic= Parse.Object.extend("Z_IMAGES_IN_COMIC");
 const query = new Parse.Query(ImagesInComic);
