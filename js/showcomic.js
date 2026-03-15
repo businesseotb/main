@@ -18,40 +18,43 @@ query.include("IMAGE");
 // sort pages
 query.descending("PAGE");
 
-query.find()
-.then(results => {
-
+query.find().then(results => {
 
 const grid = document.getElementById("comics-grid");
 
-results.forEach(item => {
+results.forEach((item, index) => {
 
 const imageObj = item.get("IMAGE");
 const imageFile = imageObj.get("IMAGE");
 const imageUrl = imageFile.url();
 
+// store url
+images.push(imageUrl);
+
 const card = document.createElement("div");
 card.className="image-card";
 
-card.innerHTML = `<img src="${imageUrl}">`;
+card.innerHTML = `<img src="${imageUrl}" loading="lazy">`;
 
 grid.appendChild(card);
 
 card.addEventListener("click", () => {
-openPopup(imageUrl);
+openPopup(index);
 });
 
 });
 
 });
-
 
 const popup = document.getElementById("image-popup");
 const popupImg = document.getElementById("popup-img");
 
-function openPopup(url){
+function openPopup(index){
 
-popupImg.src = url;
+currentIndex = index;
+
+popupImg.src = images[currentIndex];
+
 popup.classList.add("active");
 
 }
@@ -60,4 +63,38 @@ popup.addEventListener("click", () => {
 popup.classList.remove("active");
 });
 
-document.addEventListener("contextmenu", e => e.preventDefault());
+popup.addEventListener("click", (e) => {
+
+const clickX = e.clientX;
+const width = window.innerWidth;
+
+if(clickX > width / 2){
+nextImage();
+}else{
+prevImage();
+}
+
+});
+
+
+function nextImage(){
+
+if(currentIndex < images.length - 1){
+currentIndex++;
+popupImg.src = images[currentIndex];
+}
+
+}
+
+function prevImage(){
+
+if(currentIndex > 0){
+currentIndex--;
+popupImg.src = images[currentIndex];
+}
+
+}
+
+popup.addEventListener("dblclick", () => {
+popup.classList.remove("active");
+});
