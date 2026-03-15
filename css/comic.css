@@ -67,3 +67,55 @@
 .comic-card:hover .overlay {
   transform: scale(1.05);
 }
+
+/*Images of the Comic*/
+#images-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  max-width:1000px;
+  margin:auto;
+  padding:20px;
+}
+
+.image-card {
+  position:relative;
+  aspect-ratio:1/1;
+  overflow:hidden;
+  cursor:pointer;
+}
+
+.image-card img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:filter .3s;
+}
+
+.image-card:hover img {
+  filter:brightness(1.3);
+}
+
+
+#image-popup{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:black;
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:999;
+}
+
+#popup-img{
+  max-width:90%;
+  max-height:90%;
+  pointer-events:none;
+}
+
+#image-popup.active{
+  display:flex;
+}
