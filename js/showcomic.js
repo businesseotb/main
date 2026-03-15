@@ -13,29 +13,37 @@ comicPointer.id = comicId;
 query.equalTo("COMIC", comicPointer);
 query.include("IMAGE");
 
-query.find().then(results => {
+query.find()
+.then(results => {
+
+console.log("results:", results);
 
 const grid = document.getElementById("comics-grid");
 
 results.forEach(item => {
 
 const imageObj = item.get("IMAGE");
+
+console.log("imageObj:", imageObj);
+
 const imageFile = imageObj.get("IMAGE");
+
+console.log("imageFile:", imageFile);
+
 const imageUrl = imageFile.url();
 
 const card = document.createElement("div");
-card.className="image-card";
+card.className = "image-card";
 
 card.innerHTML = `<img src="${imageUrl}">`;
 
 grid.appendChild(card);
 
-card.addEventListener("click", () => {
-openPopup(imageUrl);
 });
 
-});
-
+})
+.catch(error => {
+console.error("Query error:", error);
 });
 
 const popup = document.getElementById("image-popup");
