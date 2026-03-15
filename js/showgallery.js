@@ -1,5 +1,5 @@
 Parse.initialize("AZ2atrslozmQ8GUb7iNfjuRQfpLI5WffQ4w8NCka", "mL8fa0LBZssoy82vPwQmtvW2Tz7IdpZBj9PfMASb");
-Parse.serverURL = "https://parseapi.back4app.com/";
+Parse.serverURL = "https://parseapi.back4app.com/"; 
 
 const urlParams = new URLSearchParams(window.location.search);
 const galleryId = urlParams.get("gallery");
