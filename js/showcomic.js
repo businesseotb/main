@@ -43,6 +43,8 @@ query.find().then(results => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+
 const popup = document.getElementById("image-popup");
 const popupImg = document.getElementById("popup-img");
 
@@ -100,3 +102,5 @@ rightArrow.addEventListener("click", (e) => {
     e.stopPropagation(); // prevent closing popup
     nextImage();
 });
+
+};
