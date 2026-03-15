@@ -1,6 +1,8 @@
 Parse.initialize("AZ2atrslozmQ8GUb7iNfjuRQfpLI5WffQ4w8NCka", "mL8fa0LBZssoy82vPwQmtvW2Tz7IdpZBj9PfMASb");
 Parse.serverURL = "https://parseapi.back4app.com/";
 
+console.log("showcomic.js loaded");
+
 const urlParams = new URLSearchParams(window.location.search);
 const comicId = urlParams.get("comic");
 
