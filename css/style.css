@@ -87,3 +87,11 @@ a {
   opacity: 1;
 }
 
+
+/*Font for Titles*/
+@font-face {
+    font-family: 'Avatar';
+    src: url('fonts/Avatar.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
