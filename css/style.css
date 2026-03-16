@@ -25,10 +25,12 @@ body {
 }
 
 .sec-main {
+  /*height: 61vh;              /* about 2/3 of the page */
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 40px;
   align-items: center;
-  /* height: 60vh; center vertically */
+  justify-content: flex-end;
 }
 
 @font-face {
