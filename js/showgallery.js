@@ -1,3 +1,29 @@
+let images = [];
+let currentIndex = 0;
+
+const popup = document.getElementById("image-popup");
+const popupImg = document.getElementById("popup-img");
+
+function openPopup(index){
+    currentIndex = index;
+    popupImg.src = images[currentIndex];
+    popup.classList.add("active");
+}
+function nextImage(){
+    if(currentIndex < images.length - 1){
+        currentIndex++;
+        popupImg.src = images[currentIndex];
+    }
+
+}
+
+function prevImage(){
+    if(currentIndex > 0){
+        currentIndex--;
+        popupImg.src = images[currentIndex];
+    }
+}
+
 Parse.initialize("AZ2atrslozmQ8GUb7iNfjuRQfpLI5WffQ4w8NCka", "mL8fa0LBZssoy82vPwQmtvW2Tz7IdpZBj9PfMASb");
 Parse.serverURL = "https://parseapi.back4app.com/"; 
 
