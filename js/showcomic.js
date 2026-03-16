@@ -42,7 +42,7 @@ query.equalTo("COMIC", comicPointer);
 query.include("IMAGE");
 
 // sort pages
-query.descending("PAGE");
+query.descending("NUM");
 
 query.find().then(results => {
 
