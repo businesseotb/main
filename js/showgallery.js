@@ -39,18 +39,39 @@ openPopup(imageUrl);
 });
 
 
-const popup = document.getElementById("image-popup");
-const popupImg = document.getElementById("popup-img");
+document.addEventListener("DOMContentLoaded", () => {
 
-function openPopup(url){
+document.addEventListener("keydown", e => {
+    if(!popup.classList.contains("active")) return;
 
-popupImg.src = url;
-popup.classList.add("active");
+    if(e.key === "ArrowRight"){
+        nextImage();
+    }
 
-}
+    if(e.key === "ArrowLeft"){
+        prevImage();
+    }
 
-popup.addEventListener("click", () => {
-popup.classList.remove("active");
+    if(e.key === "Escape"){
+        popup.classList.remove("active");
+    }
 });
 
-document.addEventListener("contextmenu", e => e.preventDefault());
+popup.addEventListener("dblclick", () => {
+    popup.classList.remove("active");
+});
+
+const leftArrow = document.querySelector(".left-arrow");
+const rightArrow = document.querySelector(".right-arrow");
+
+leftArrow.addEventListener("click", (e) => {
+    e.stopPropagation(); // prevent closing popup
+    prevImage();
+});
+
+rightArrow.addEventListener("click", (e) => {
+    e.stopPropagation(); // prevent closing popup
+    nextImage();
+});
+
+});
