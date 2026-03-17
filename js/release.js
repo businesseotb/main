@@ -3,7 +3,7 @@ Parse.initialize("AZ2atrslozmQ8GUb7iNfjuRQfpLI5WffQ4w8NCka", "mL8fa0LBZssoy82vPw
 Parse.serverURL = "https://parseapi.back4app.com/";
 
 // Reference to release container
-const releaseGrid = document.getElementById("release-grid");
+const releaseGrid = document.getElementById("galley-grid");
 
 // Query release table
 const release = Parse.Object.extend("Z_PUB");
@@ -18,7 +18,7 @@ results.forEach((release) => {
   const imageUrl = imageFile ? imageFile.url() : ""; // get the actual URL
 
   const square = document.createElement("div");
-  square.className = "release-square";
+  square.className = "gallery-square";
 
   const img = document.createElement("img");
   img.src = imageUrl;
