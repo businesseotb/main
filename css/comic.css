@@ -65,6 +65,7 @@
 
 .comic-card:hover .overlay {
   transform: scale(1.05);
+  transition: all 1s ease;
 }
 
 /*Images of the Comic*/
