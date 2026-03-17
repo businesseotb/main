@@ -18,14 +18,13 @@
   padding: 2rem;
   max-width: 900px; /* optional, to prevent huge squares on large screens */
   margin: 0 auto; /* center grid */
+  width: 100%;
 }
 
 /* Vertical rectangle instead of square */
 .comic-card {
   aspect-ratio: 2 / 3;
   position: relative;
- /* width: 100%;*/
-  /*padding-top: 150%;  taller than width = vertical rectangle */
   overflow: hidden;
   border-radius: 10px;
   cursor: pointer;
@@ -76,6 +75,7 @@
   max-width:1000px;
   margin:auto;
   padding:20px;
+  width: 100%;
 }
 
 .image-card {
