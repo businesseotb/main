@@ -21,6 +21,7 @@ body {
 
 .sec-header {
     font-family: 'Avatar', sans-serif;
+    background-color: black;
     text-align: center;
     font-size: 60px;
     width: 100%;
