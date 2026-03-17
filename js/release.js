@@ -3,7 +3,7 @@ Parse.initialize("AZ2atrslozmQ8GUb7iNfjuRQfpLI5WffQ4w8NCka", "mL8fa0LBZssoy82vPw
 Parse.serverURL = "https://parseapi.back4app.com/";
 
 // Reference to release container
-const releaseGrid = document.getElementById("galley-grid");
+const releaseGrid = document.getElementById("gallery-grid");
 
 // Query release table
 const release = Parse.Object.extend("Z_PUB");
