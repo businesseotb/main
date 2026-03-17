@@ -41,7 +41,7 @@ query.include("IMAGE");
 
 query.find().then(results => {
 
-    const grid = document.getElementById("pubs-grid");
+    const grid = document.getElementById("images-grid");
 
     results.forEach((item, index) => {
 
