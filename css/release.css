@@ -56,10 +56,12 @@
 
 .gallery-square:hover img {
   filter: brightness(0.9);
+  transition: all 1s ease;
 }
 
 .gallery-square:hover .overlay {
   transform: scale(1.05);
+  transition: all 1s ease;
 }
 
 /*Images of the Gallery*/
@@ -89,6 +91,7 @@
 
 .image-card:hover img {
   filter:brightness(0.9);
+  transition: all 1s ease;
 }
 
 
