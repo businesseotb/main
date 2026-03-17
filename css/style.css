@@ -51,11 +51,11 @@ header {
 }
 
 .main {
-  height: 50vh;              /* about 2/3 of the page */
+  height: 40vh;              /* about 2/3 of the page */
   display: flex;
   flex-direction: column;
   padding-bottom: 40px;
-  align-items: center;
+  align-items: space-around;
   justify-content: flex-end;
 }
 
