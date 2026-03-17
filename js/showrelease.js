@@ -30,6 +30,8 @@ Parse.serverURL = "https://parseapi.back4app.com/";
 const urlParams = new URLSearchParams(window.location.search);
 const PubId = urlParams.get("Pub");
 
+console.log(PubId);
+
 const ImagesInPub = Parse.Object.extend("Z_IMAGES_IN_PUB");
 const query = new Parse.Query(ImagesInPub);
 
