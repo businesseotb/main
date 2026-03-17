@@ -51,7 +51,7 @@ header {
 }
 
 .main {
-  height: 61vh;              /* about 2/3 of the page */
+  height: 50vh;              /* about 2/3 of the page */
   display: flex;
   flex-direction: column;
   padding-bottom: 40px;
