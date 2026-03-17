@@ -42,12 +42,6 @@ body {
   justify-content: flex-end;
 }
 
-@font-face {
-  font-family: "Herculanum LT W01 Bold";
-  font-weight: normal;
-  font-style: normal;
-}
-
 header {
   background-color: transparent;
   color: #ffffff; /* white text */
@@ -64,7 +58,7 @@ header {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Herculanum LT W01 Bold";
+  font-family: 'Avatar', sans-serif;
   color: #ffffff; /* ensures headings are white */
   font-weight: bold;
   margin: 0.5rem 0;
@@ -72,13 +66,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  font-family: "Herculanum LT W01 Bold";
+  font-family: 'Avatar', sans-serif;
   color: #ffffff;
   margin: 0.5rem 0;
 }
 
 a {
-  font-family: "Herculanum LT W01 Bold";
+  font-family: 'Avatar', sans-serif;
   color: #ffffff;
   font-size: 2rem;
   opacity: 0.75;
