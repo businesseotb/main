@@ -1,17 +1,25 @@
 // Initialize Back4App
+
+console.log("Enter Js");
+
 Parse.initialize("AZ2atrslozmQ8GUb7iNfjuRQfpLI5WffQ4w8NCka", "mL8fa0LBZssoy82vPwQmtvW2Tz7IdpZBj9PfMASb");
 Parse.serverURL = "https://parseapi.back4app.com/";
 
 const Comics = Parse.Object.extend("Z_COMICS"); 
 const query = new Parse.Query(Comics);
 
+console.log("Before Query");
+
 query.find().then((results) => {
   const grid = document.getElementById("comic-grid");
-
+  console.log("Created Grid");
+  
   results.forEach((comic) => {
     const name = comic.get("NAME");
     const imageFile = comic.get("COVER"); // Back4App file
     const imageUrl = imageFile ? imageFile.url() : "";
+
+    console.log("Found" + name);
 
     const card = document.createElement("div");
     card.className = "comic-card";
@@ -28,6 +36,7 @@ query.find().then((results) => {
 
 
     grid.appendChild(card);
+    console.log("Added card");
   });
 }).catch((error) => {
   console.error("Error fetching comics:", error);
